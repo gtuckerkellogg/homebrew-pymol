@@ -1,4 +1,4 @@
-Seems broken on Snow Leopard on Intel Core Duo
+**This DOES NOT WORK yet **
 
 PyMol is the only reason why I keep MacPorts around.  I am trying to put an
 end to this by creatinga Homebrew Formula to install PyMol.
