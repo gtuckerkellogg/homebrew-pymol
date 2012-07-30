@@ -1,0 +1,10 @@
+PyMol is the only reason why I keep MacPorts around.  I am trying to put an
+end to this by creatinga Homebrew Formula to install PyMol.
+
+This Formula installs PyMol 1.3r2.  I have been unable to get any of the two
+newer versions to compile on OS X Lion. YMMV on Mountain Lion.
+
+__Instructions__
+
+brew tap https://github.com/mazubieta/brew-pymol.git
+brew install pymol
