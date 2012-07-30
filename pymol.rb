@@ -9,13 +9,12 @@ class Pymol < Formula
   sha1 'e9bb50b11063190023f67946484d12d97d5acd81'
 
 depends_on 'glew'
-depends_on 'tk'
 depends_on :libpng
 depends_on :x11 # if your formula requires any X11/XQuartz components
 
   def install
     # ENV.j1  # if your formula's build system can't parallelize
-    ENV.prepend 'CPPFLAGS', '-I/usr/X11/include', '-I/usr/X11/include/freetyp2', '-I/usr/local/include/GL'
+    ENV.prepend 'CPPFLAGS', '-I/usr/X11/include -I/usr/X11/include/freetyp2 -I/usr/local/include/GL'
     ENV.prepend 'LDFLAGS', '-lGLEW'
 
     system "python setup.py build"
