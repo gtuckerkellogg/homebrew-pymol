@@ -18,9 +18,9 @@ depends_on :x11 # if your formula requires any X11/XQuartz components
     ENV.prepend 'LDFLAGS', '-lGLEW'
 
     system "python setup.py build"
-    system "python setup.py install"
-    system "python setup2.py install"
-    system "ln -s pymol #{HOMEBREW_PREFIX}/bin/pymol"
+    system "python setup.py install--prefix=#{HOMEBREW_PREFIX}/bin"
+    system "python setup2.py install --prefix=#{HOMEBREW_PREFIX}/bin"
+    # system "ln -s pymol #{HOMEBREW_PREFIX}/bin/pymol"
   end
 
   def test
