@@ -14,7 +14,7 @@ depends_on :x11 # if your formula requires any X11/XQuartz components
 
   def install
     # ENV.j1  # if your formula's build system can't parallelize
-    ENV.prepend 'CPPFLAGS', '-I/usr/X11/include -I/usr/X11/include/freetyp2 -I/usr/local/include/GL'
+    ENV.prepend 'CPPFLAGS', '-I/usr/X11/include -I/usr/X11/include/freetype2 -I/usr/local/include/GL'
     ENV.prepend 'LDFLAGS', '-lGLEW'
 
     system "python setup.py build"
