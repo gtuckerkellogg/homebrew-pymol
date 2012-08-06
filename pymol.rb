@@ -8,8 +8,9 @@ class Pymol < Formula
   url 'http://downloads.sourceforge.net/project/pymol/pymol/1.3r2/pymol-1.3r2-src.tar.bz2'
   sha1 'e9bb50b11063190023f67946484d12d97d5acd81'
 
-depends_on :glew
-depends_on :tk
+depends_on "python"
+depends_on "glew"
+depends_on "tk"
 depends_on :libpng
 depends_on :x11 # if your formula requires any X11/XQuartz components
 
